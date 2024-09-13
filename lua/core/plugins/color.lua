@@ -1,6 +1,25 @@
+function ColorMyPencils(color)
+    color = color or "catppuccin"
+    vim.cmd.colorscheme(color)
+
+
+    --vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    --vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+end
+
 return {
-	"rebelot/kanagawa.nvim",
+	"catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
 	config = function()
-		vim.cmd([[colorscheme kanagawa]])
+        require("catppuccin").setup({
+            flavor = "macchiato",
+            transparent_background = true,
+        })
+
+        vim.cmd("colorscheme catppuccin")
+
+        ColorMyPencils()
 	end,
 }

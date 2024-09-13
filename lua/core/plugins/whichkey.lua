@@ -1,3 +1,5 @@
+return {}
+--[[
 return {
 
     "folke/which-key.nvim",
@@ -23,3 +25,4 @@ return {
         -- refer to the configuration section below
     }
 }
+--]]
