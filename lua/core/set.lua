@@ -19,4 +19,14 @@ vim.opt.scrolloff = 8
 vim.cmd([[
     au BufRead *.php set ft=php.html
     au BufNewFile *.php set ft=php.html
+    au VimLeave * lua CleanUp()
+    set splitright
+    hi clear TODO
 ]])
+
+function Start()
+    vim.cmd([[
+    bufferd! out 
+    ]])
+    print("Good Bye")
+end
